@@ -11,3 +11,6 @@
 ## sudo apt-get install python3
 
 ## sudo apt-get install python3-opencv
+
+## sudo apt-get install python3-dev python-pip gcc
+## sudo apt-get install linux-headers-$(uname -r)
