@@ -14,3 +14,4 @@
 
 ## sudo apt-get install python3-dev python-pip gcc
 ## sudo apt-get install linux-headers-$(uname -r)
+## sudo pip install evdev
