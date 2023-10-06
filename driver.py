@@ -60,17 +60,26 @@ def detect(gray, frame):
     faces = face_recognition.detectMultiScale(gray, 1.3, 5)
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-        if(x>160 or x<130 or y>100 or y<80):
-            delta_y= y-90
-            delta_x= x-145
+        print(x,y)
+        if(x>300):
             with uinput.Device(events) as device:
                 for i in range(20):
-                # syn=False to emit an "atomic" (5, 5) event.
-                    device.emit(uinput.REL_X, delta_x, syn=False)
-                    device.emit(uinput.REL_Y, delta_y)
-
-                    # Just for demonstration purposes: shows the motion. In real
-                    # application, this is of course unnecessary.
+                    device.emit(uinput.REL_X, -3)
+                    time.sleep(0.01)
+        if(x<180):
+            with uinput.Device(events) as device:
+                for i in range(20):
+                    device.emit(uinput.REL_X, 3)
+                    time.sleep(0.01)
+        if(y>200):
+            with uinput.Device(events) as device:
+                for i in range(20):
+                    device.emit(uinput.REL_Y, 3)
+                    time.sleep(0.01)
+        if(y<155):
+            with uinput.Device(events) as device:
+                for i in range(20):
+                    device.emit(uinput.REL_Y, -3)
                     time.sleep(0.01)
 
         roi_gray = gray[y:y+h, x:x+w]
