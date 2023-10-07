@@ -88,6 +88,8 @@ def detect(gray, frame):
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(roi_color, (ex, ey), (ex+ew, ey+eh), (0, 255, 0), 2)
             #print(ew,eh)
+            if len(eyes)<2:
+                device.emit(uinput.BTN_LEFT)
     return frame
 
 
