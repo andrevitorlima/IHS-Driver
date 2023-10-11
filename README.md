@@ -25,3 +25,7 @@ Abra o terminal e execute os seguintes comandos:
 Para executao o projeto você deve: baixar o arquivo, extraí-lo e executá-lo usando o seguinte comando no terminal no diretório em que se encontra o arquivo.
 
 ## $ sudo python3 driver.py
+
+Link da demonstração: https://youtu.be/UcBvYqqgRRE
+
+Link da apresentação: https://www.canva.com/design/DAFwy4Tp4qk/3L-juubA2zlY0MPh51qFMA/edit?utm_content=DAFwy4Tp4qk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
